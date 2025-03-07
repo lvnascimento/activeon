@@ -1,0 +1,2121 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#"
+     xml:base="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:mapping="https://w3id.org/function/vocabulary/mapping#"
+     xmlns:activeon="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#"
+     xmlns:ontology="https://w3id.org/function/ontology#"
+     xmlns:spacecon="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#"
+     xmlns:implementation="https://w3id.org/function/vocabulary/implementation#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon">
+        <owl:imports rdf:resource="http://purl.org/nemo/gufo#/1.0.0"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:comment xml:lang="en">This ontology models high-level concepts related to human activities in smart enviroments.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ActivEOn</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasContext">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <rdfs:label xml:lang="en">has context</rdfs:label>
+        <rdfs:label xml:lang="pt">tem contexto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasFinalSituation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasFinalSituation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <rdfs:label xml:lang="en">has final situation</rdfs:label>
+        <rdfs:label xml:lang="pt">tem situação final</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasGoal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:label xml:lang="en">has goal</rdfs:label>
+        <rdfs:label xml:lang="pt">tem objetivo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasInitialSituation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasInitialSituation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <rdfs:label xml:lang="en">has initial situation</rdfs:label>
+        <rdfs:label xml:lang="pt">tem situação inicial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasSubActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasSubActivity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasSuperActivity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:label xml:lang="en">has sub activity</rdfs:label>
+        <rdfs:label xml:lang="pt">tem sub-atividade</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasSuperActivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasSuperActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:label xml:lang="en">has super activity</rdfs:label>
+        <rdfs:label xml:lang="pt">tem super atividade</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+        <rdfs:label xml:lang="en">has type</rdfs:label>
+        <rdfs:label xml:lang="pt">tem tipo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#isPerformedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:label xml:lang="en">is performed by</rdfs:label>
+        <rdfs:label xml:lang="pt">é executada por</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#next -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#next">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#previous"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:label xml:lang="en">next</rdfs:label>
+        <rdfs:label xml:lang="pt">próxima</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#occuredIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#occuredIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:label xml:lang="en">occured in</rdfs:label>
+        <rdfs:label xml:lang="pt">ocorrido em</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#previous -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#previous">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:label xml:lang="pt">anterior</rdfs:label>
+        <rdfs:label xml:lang="en">previous</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#requires">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+        <rdfs:label xml:lang="pt">requer</rdfs:label>
+        <rdfs:label xml:lang="en">requires</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#uses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+        <rdfs:label xml:lang="pt">usa</rdfs:label>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+        <rdfs:label xml:lang="pt">tem descrição</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">has id</rdfs:label>
+        <rdfs:label xml:lang="pt">tem id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sequenceNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sequenceNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="pt">número de sequência</rdfs:label>
+        <rdfs:label xml:lang="en">sequence number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasGoal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#isPerformedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasFinalSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasInitialSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#hasType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#next"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#occuredIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#previous"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <rdfs:label xml:lang="pt">Atividade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+        <rdfs:label xml:lang="en">Activity Type</rdfs:label>
+        <rdfs:label xml:lang="pt">Tipo de Atividade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#App -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#App">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bread -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bread">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Car">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#CoffeeMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#CoffeeMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Drawer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Drawer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Driving -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Driving">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Eating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Eating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+        <rdfs:label xml:lang="en">Goal</rdfs:label>
+        <rdfs:label xml:lang="pt">Objetivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HomeAssistant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HomeAssistant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ParkingLot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ParkingLot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PresenceSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PresenceSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Category"/>
+        <rdfs:label xml:lang="pt">Recurso</rdfs:label>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Shower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Shower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+        <rdfs:label xml:lang="pt">Situação</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Smartphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Smartphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#DrivingACar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#DrivingACar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Driving"/>
+        <rdfs:comment>A person driving a car.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#GoingToAPlace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#GoingToAPlace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>Going to a place from another place.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HavingLunch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HavingLunch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Eating"/>
+        <rdfs:comment>A person is having lunch.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanelAtPublicParkingLot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanelAtPublicParkingLot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanel"/>
+        <rdfs:comment>Information panel at the public parking lot next to Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">John Silva</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsCar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsCar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Car"/>
+        <rdfs:label>John&apos;s car.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsSmartphone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsSmartphone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Smartphone"/>
+        <rdfs:comment>John&apos;s smartphone</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Listening_to_Music -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Listening_to_Music">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#Aspect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Making_Coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Making_Coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Mary Johnson</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBathroomPresenceSensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBathroomPresenceSensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PresenceSensor"/>
+        <rdfs:comment>Mary&apos;s bathroom presence sensor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bed"/>
+        <rdfs:comment>Mary&apos;s bed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysCoffeMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysCoffeMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#CoffeeMachine"/>
+        <rdfs:comment>Mary&apos;s coffee machine.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysHomeAssistant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysHomeAssistant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HomeAssistant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysShower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysShower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Shower"/>
+        <rdfs:comment>Mary&apos;s shower</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysSmartphone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysSmartphone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Smartphone"/>
+        <rdfs:comment>Mary&apos;s smartphone</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MessageApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MessageApp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#App"/>
+        <rdfs:comment>Message app used by Mary.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#NavigationApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#NavigationApp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#App"/>
+        <rdfs:comment>Navigation app used by John.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Parking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Parking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Driving"/>
+        <rdfs:comment>Parking a vehicle.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PublicParkingLotNextToRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PublicParkingLotNextToRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ParkingLot"/>
+        <rdfs:comment>Parking lot next to the Green Dreams Restaurant</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Reading_Messages -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Reading_Messages">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#RestaurantRecommendationApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#RestaurantRecommendationApp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#App"/>
+        <rdfs:comment>Restaurant recommendation app used by John.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_Green_Dreams_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_Green_Dreams_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Green_Dreams_Restaurant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Hotel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Sleeping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Sleeping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Standing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Standing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>A person standing on a place.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Taking_a_Shower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Taking_a_Shower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingRestaurantRecApp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingRestaurantRecApp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingApp"/>
+        <rdfs:comment>Using a restaurant recommendation app to searching restaurants.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#WakingUp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#WakingUp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Driving_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Driving_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Driving_to_the_Restaurant"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#DrivingACar"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Parking"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Driving_to_the_Restaurant"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsCar"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsSmartphone"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#NavigationApp"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+        <rdfs:comment>John is driving to the public parking lot next to the Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Going_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Going_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasFinalSituation rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_Green_Dreams_Restaurant"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Going_to_the_Restaurant"/>
+        <hasInitialSituation rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation_John_at_hotel"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Driving_to_the_Restaurant"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Parking"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Restaurant"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#GoingToAPlace"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <dc:description>He takes his car and uses his navigation app to drive from the hotel to the restaurant. The restaurant is next to a public parking lot equipped with a panel that lists the available parking spaces. John uses the information provided by the panel to park in an available parking space. He spends fifteen minutes driving to the public parking lot and just two minutes parking the car. John spends one minute more walking to the restaurant.</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Having_Lunch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Having_Lunch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Green_Dreams_Restaurant"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Having_Lunch"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#HavingLunch"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Having_Lunch"/>
+        <dc:description>John is having lunch at the Green Dreams Restaurant.</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Listening_to_Music -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Listening_to_Music">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Listening_to_Music"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Mary_is_in_the_kitchen"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysHomeAssistant"/>
+        <rdfs:comment>Mary is listening to music while makes coffee.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Making_Coffee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Making_Coffee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Making_Coffee"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Mary_is_in_the_kitchen"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysCoffeMachine"/>
+        <rdfs:comment>Mary is making coffee in the kitchen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_2"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_2"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_2"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Close"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Manipulative_Gestures"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Closing_the_Kitchen_Drawer"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequenceNumber>
+        <rdfs:comment>The volunteer closes a drawer in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Bread"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Bread"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Fetch"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Manipulative_Gestures"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Fetching_Bread"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+        <rdfs:comment>The volunteer fetches the bread inside the drawer in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Standing_in_front_of_the_Kitchen_Drawer"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_from_the_Kitchen_Drawer"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_to_the_Kitchen_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_II"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <rdfs:comment>The volunteer gets the bread for breakfast in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Move"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_2"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_Bread"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Bread"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Move"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_1"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_1"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_1"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+        <rdfs:comment>The volunteer moves the kitchen drawer to get bread.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Move"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_2"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_2"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_2"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_1"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_1"/>
+        <hasSubActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_1"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Manipulative_Gestures"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Open"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Opening_the_Kitchen_Drawer"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+        <rdfs:comment>The volunteer opens a resource in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Fetch_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Reach"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Bread"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_Bread"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_1"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+        <rdfs:comment>The volunteer reaches the bread available in the kitchen&apos;s drawer.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Reach"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_1"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_1"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+        <rdfs:comment>The volunteer opens the kitchen drawer to get bread.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Drawer_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Reach"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_2"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_2"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Bread"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Open_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Release"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Reach_Bread"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_1"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_1"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequenceNumber>
+        <rdfs:comment>The volunteer releases the kitchen drawer to get bread.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Release_Drawer_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Close_Drawer"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Release"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_2"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Move_Drawer_2"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequenceNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Standing_in_front_of_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Standing_in_front_of_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Standing"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Modes_of_Locomotion"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_from_the_Kitchen_Drawer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Standing_in_front_of_the_Kitchen_Drawer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Waking_from_the_Kitchen_Drawer"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_to_the_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+        <rdfs:comment>The volunteer stands in front of the kitchen drawer in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_from_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_from_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasInitialSituation rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sit_Opp_Volunteer_in_the_Kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Modes_of_Locomotion"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Standing_in_front_of_the_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequenceNumber>
+        <rdfs:comment>The volunteer walks from the kitchen drawer in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_to_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Walking_to_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasFinalSituation rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sit_Opp_Volunteer_in_the_Kitchen"/>
+        <hasSuperActivity rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Get_Bread"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Modes_of_Locomotion"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Opp_Standing_in_front_of_the_Kitchen_Drawer"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen_Drawer"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequenceNumber>
+        <rdfs:comment>The volunteer walks to the kitchen drawer in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Parking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Parking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Parking"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Parking"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Restaurant"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Parking"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#InformationPanelAtPublicParkingLot"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsCar"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#PublicParkingLotNextToRestaurant"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequenceNumber>
+        <rdfs:comment>John is parking his car at the public parking lot next to the Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Reading_Messages -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Reading_Messages">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Reading_Messages"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Mary_is_in_the_kitchen"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysSmartphone"/>
+        <rdfs:comment>Mary is reading messages on her phone in the kitchen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Searching_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Searching_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Hotel"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Searching_Restaurant"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#UsingRestaurantRecApp"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Searching_Restaurant"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#JohnsSmartphone"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#RestaurantRecommendationApp"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John is at a hotel in Technopolis downtown. It is noon and he is hungry. He opens a restaurant recommendation app on his smartphone and spends five minutes searching for vegetarian restaurants in the neighborhood. The app recommends three restaurants and John chooses one called Green Dreams.</dc:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Sleeping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Sleeping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bedroom"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Sleeping"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_WakingUp"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Sleeping"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBed"/>
+        <rdfs:comment>Mary is sleeping on her bed.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Taking_a_Shower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Taking_a_Shower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bathroom"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Taking_a_Shower"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Listening_to_Music"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Making_Coffee"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Reading_Messages"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Taking_a_Shower"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysBathroomPresenceSensor"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysShower"/>
+        <rdfs:comment>Mary is taking a shower of 15 minutes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_WakingUp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_WakingUp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bedroom"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_WakingUp"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Bathroom"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_WakingUp"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Sleeping"/>
+        <uses rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#MarysHomeAssistant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Bathroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Bathroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <next rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Taking_a_Shower"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Bathroom"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#WakingUp"/>
+        <rdfs:comment>Mary gets up and walks to the bathroom.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Taking_a_Shower"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_Walking_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Activity"/>
+        <hasGoal rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Walking_to_the_Restaurant"/>
+        <hasType rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking"/>
+        <isPerformedBy rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <occuredIn rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Restaurant"/>
+        <previous rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Parking"/>
+        <sequenceNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequenceNumber>
+        <rdfs:comment>John is walking from the public parking lot to the Green Dreams Restaurant</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Close -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Close">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>The volunteer closes a resource in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Fetch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Fetch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>The volunteer fetches a resource from somewhere in the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_II">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Manipulative_Gestures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Manipulative_Gestures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+        <rdfs:comment>An activity of the level III in the Opportunity scenario. Logical, physiological, and spatial limitations distinguish the order of activities in Level III. Here the activities are modes of locomotion and manipulative gestures.It is possible that manipulative gestures and modes of locomotion overlap.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Modes_of_Locomotion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_III_Modes_of_Locomotion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ActivityType"/>
+        <rdfs:comment>An activity of the level III in the Opportunity scenario. Logical, physiological, and spatial limitations distinguish the order of activities in Level III. Here the activities are modes of locomotion and manipulative gestures.It is possible that manipulative gestures and modes of locomotion overlap.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Level_IV_Atomic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>An activity of the level IV in the Opportunity scenario. Level IV encapsulates the atomic gestures forming the manipulative gestures of level III.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Move -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Move">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>A person moves a resource.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Open -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Open">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>The volunteer opens a resource.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Reach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Reach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>A person reaches a resource.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Release -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#act_type_Opp_Release">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Movement"/>
+        <rdfs:comment>A person releases a resource.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_John_location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_John_location">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElement"/>
+        <spacecon:characterizes rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#John"/>
+        <spacecon:hasAspect rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName"/>
+        <rdfs:comment>The name of the John&apos;s location.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Mary_location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Mary_location">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElement"/>
+        <spacecon:characterizes rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <spacecon:hasAspect rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName"/>
+        <rdfs:comment>Description of Mary&apos;s location.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Opp_Volunteer_location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Opp_Volunteer_location">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElement"/>
+        <spacecon:characterizes rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#actor_Opp_Volunteer"/>
+        <spacecon:hasAspect rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Green_Dreams_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Green_Dreams_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:hasContextElement rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_John_location"/>
+        <spacecon:hasValue rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Green_Dreams_Restaurant"/>
+        <time:hasTime rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:23"/>
+        <rdfs:comment>John is at Green Dreams Restaurant</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_John_at_Hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:hasContextElement rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_John_location"/>
+        <spacecon:hasValue rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Downtown_Hotel"/>
+        <time:hasTime rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:00"/>
+        <rdfs:comment>John is at the hotel in the Technopolis downtown.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bathroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bathroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:characterizes rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Mary"/>
+        <spacecon:hasAspect rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#LocationPlaceName"/>
+        <rdfs:comment>Mary is in her bathroom.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_bedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:hasContextElement rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Mary_location"/>
+        <spacecon:hasValue rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysBedroom"/>
+        <time:hasTime rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00"/>
+        <rdfs:comment>Mary is sleeping on her bed.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:hasContextElement rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Mary_location"/>
+        <spacecon:hasContextValue rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Mary_in_kitchen"/>
+        <rdfs:comment>Mary is in her kitchen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextualElementInstance"/>
+        <spacecon:hasContextElement rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_Opp_Volunteer_location"/>
+        <spacecon:hasValue rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Opp_Kitchen"/>
+        <time:hasTime rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Downtown_Hotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Downtown_Hotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel at Technopolis Downtown</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Green_Dreams_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Green_Dreams_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:label>Green Dreams Restaurant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysBathroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysBathroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:comment>Mary&apos;s bathroom.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysBedroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysBedroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:comment>Mary&apos;s bedroom.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysKitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_MarysKitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:comment>Mary&apos;s kitchen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Opp_Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_value_Opp_Kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2022/4/frameworktese#ContextValue"/>
+        <rdfs:label>Opportunity scenario kitchen.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Driving_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Driving_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John arrives at the public parking lot next to the Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Going_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Going_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John arrives at the Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Having_Lunch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Having_Lunch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John is not hungry anymore.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Parking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Parking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John have just parked his car at the public parking lot next to Green Dreams Restaurant.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Searching_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Searching_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John finds a vegetarian restaurant to have lunch.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Walking_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#goal_act_Walking_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Goal"/>
+        <rdfs:comment>John is at the Green Dreams Restaurant</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Bread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Bread"/>
+        <rdfs:comment>A loaf of bread available in the Opportunity scenario kitchen drawer.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#res_Opp_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Drawer"/>
+        <rdfs:comment>A drawer in the kitchen related to the Opportunity scenario.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sit_Opp_Volunteer_in_the_Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#sit_Opp_Volunteer_in_the_Kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Situation"/>
+        <hasContext rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#ctx_elem_inst_Opp_Volunteer_in_the_kitchen"/>
+        <rdfs:comment>The volunteer is in the kitchen.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Closing_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Closing_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:45"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Driving_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Driving_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:05"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Fetching_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Fetching_Bread">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Having_Lunch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Having_Lunch">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:23"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:53"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Mary_is_in_the_kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Mary_is_in_the_kitchen">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:30"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_Bread">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:25"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:10"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Moving_the_Kitchen_Drawer_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:35"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:40"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Opening_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Opening_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Parking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Parking">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:20"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:22"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_Bread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_Bread">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:10"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Reaching_the_Kitchen_Drawer_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:35"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:15"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Releasing_the_Kitchen_Drawer_2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:40"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:45"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Searching_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Searching_Restaurant">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Sleeping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Sleeping">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_23:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Standing_in_front_of_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Standing_in_front_of_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:12"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Taking_a_Shower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Taking_a_Shower">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_WakingUp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_WakingUp">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Waking_from_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Waking_from_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:38"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Bathroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Bathroom">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen_Drawer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Kitchen_Drawer">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_05:59:50"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_interval_Walking_to_the_Restaurant">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:22"/>
+        <time:hasEnd rdf:resource="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:23"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_05:59:50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_05:59:50">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T05:59:50-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:10">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:10-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:12">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:12-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:15-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:20-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:25">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:25-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:30">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:30-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:35">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:35-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:38">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:38-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:40">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:40-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:45">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:45-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_06:00:50">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T06:00:50-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:00">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T07:00:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:15">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T07:15:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_07:30">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-27T07:30:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:00">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:00:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:05">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:05:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:20">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:20:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:22">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:22:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:23">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:23:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_12:53">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-05-28T12:53:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_23:00 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#time_23:00">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2024-08-26T23:00:00-03:00</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/lvian/ontologies/2024/4/activeon#Walking">
+        <rdfs:comment>A person walking</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
